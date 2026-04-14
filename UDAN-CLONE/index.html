@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Udaan — B2B Trade Marketplace (clone)</title>
+    <link rel="stylesheet" href="udan.css">
+    <meta name="description" content="Static HTML/CSS clone of Udaan homepage (visual approximation).">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style>
+        /* small reset for fonts if user offline */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#">Udaan</a>
+            <nav class="main-nav">
+                <a href="#">For Buyers</a>
+                <a href="#">For Wholesalers</a>
+                <a href="#">For Brands</a>
+                <a href="udan-about.html">About us</a>
+            </nav>
+            <div class="header-actions">
+                <a class="btn ghost" href="#">Sign In</a>
+                <a class="btn primary" href="#">Get the app</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Buy and sell wholesale across India</h1>
+                    <p class="lead">A B2B marketplace connecting retailers, wholesalers and brands — discover products,
+                        place bulk orders, and access logistics & finance.</p>
+                    <form class="hero-search" action="#" onsubmit="return false;">
+                        <input type="search" placeholder="Search products, categories, suppliers" aria-label="Search">
+                        <button class="btn primary">Search</button>
+                    </form>
+                    <div class="hero-cta">
+                        <a class="link" href="#">Explore categories</a>
+                        <a class="link" href="#">Start selling</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <img src="https://c8.alamy.com/comp/2C4A7Y7/assam-india-may-23-2020-udaan-a-network-for-b2b-trades-2C4A7Y7.jpg"
+                        alt="Hero image" class="img-slot" data-slot="hero">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <ul class="features-grid">
+                    <li>
+                        <img src="https://i.etsystatic.com/40236108/r/il/cdf2ab/6073820015/il_794xN.6073820015_kgne.jpg"
+                            alt="Wide catalogue" class="img-slot small" data-slot="feature-1">
+                        <strong>Wide catalogue</strong>
+                        <span>Millions of products across categories</span>
+                    </li>
+                    <li>
+                        <img src="https://static.vecteezy.com/system/resources/previews/026/711/268/large_2x/trusted-seller-label-best-seller-premium-member-badge-verified-seller-rubber-stamp-shield-illustration-3d-realistic-glossy-and-shiny-badge-vector.jpg"
+                            alt="Verified sellers" class="img-slot small" data-slot="feature-2">
+                        <strong>Verified sellers</strong>
+                        <span>Curated suppliers with ratings</span>
+                    </li>
+                    <li>
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.lJswENQHEMgHntgLDP9fpgHaE1?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Trade finance" class="img-slot small" data-slot="feature-3">
+                        <strong>Trade finance</strong>
+                        <span>Quick credit and payment options</span>
+                    </li>
+                    <li>
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.LdLkwlckgV5gBnX5AGezzQHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Logistics" class="img-slot small" data-slot="feature-4">
+                        <strong>Logistics</strong>
+                        <span>Hassle-free pickup & delivery</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Popular categories</h2>
+                <div class="cat-grid">
+                    <div class="cat"><img
+                            src="https://tse1.mm.bing.net/th/id/OIP.7RpXh8CduPCWzckb8Qso5AHaEz?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-slot cat-img" data-slot="cat-groceries" alt="Groceries">Groceries</div>
+                    <div class="cat"><img
+                            src="https://tse3.mm.bing.net/th/id/OIP.gimALog5_hOwMbhzqGVQlQHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-slot cat-img" data-slot="cat-home" alt="Home & Kitchen">Home & Kitchen</div>
+                    <div class="cat"><img
+                            src="https://thumbs.dreamstime.com/b/shopping-rows-clothes-store-shelves-racks-trousers-shirts-t-women-underwear-194528645.jpg"
+                            class="img-slot cat-img" data-slot="cat-apparel" alt="Apparel">Apparel</div>
+                    <div class="cat"><img
+                            src="https://c8.alamy.com/comp/RNR4N5/singapore-circa-november-2015-interior-of-a-store-at-singapore-changi-airport-changi-airport-is-the-primary-civilian-airport-for-singapore-and-o-RNR4N5.jpg"
+                            class="img-slot cat-img" data-slot="cat-electronics" alt="Electronics">Electronics</div>
+                    <div class="cat"><img
+                            src="https://thumbs.dreamstime.com/b/display-cosmetics-makeup-products-store-variety-neatly-arranged-shelves-counters-different-brands-types-such-as-315349622.jpg"
+                            class="img-slot cat-img" data-slot="cat-beauty" alt="Beauty">Beauty</div>
+                    <div class="cat"><img
+                            src="https://tse1.mm.bing.net/th/id/OIP.UcnI3Y72l_TkTyyA_ThfMgHaFW?cb=ucfimg2&ucfimg=1&w=540&h=390&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-slot cat-img" data-slot="cat-stationery" alt="Stationery">Stationery</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="col">
+                <h4>Udaan</h4>
+                <p>Buy wholesale. Sell wholesale.</p>
+            </div>
+            <div class="col">
+                <h5>Company</h5>
+                <a href="udan-about.html">About</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="col">
+                <h5>Support</h5>
+                <a href="#">Help center</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="col">
+                <h5>Legal</h5>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <small>© 2025 Udaan — static clone for demo</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>
