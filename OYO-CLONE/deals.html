@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OYO — Deals</title>
+  <link rel="stylesheet" href="oyodeals.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><img src="https://latestlogo.com/wp-content/uploads/2024/02/oyo.png" alt="OYO logo"></div>
+      <nav class="main-nav">
+        <a href="#">Stays</a>
+        <a href="#">Deals</a>
+        <a href="#">Offers</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Exclusive OYO Deals</h1>
+        <p>Save more on stays with member-only offers, flash sales and curated deals across cities.</p>
+      </div>
+      <form class="search-form" onsubmit="return false;">
+        <input type="search" placeholder="Search city, hotel or locality" aria-label="Search">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="filters container">
+    <div class="chip active">All Deals</div>
+    <div class="chip">Flash Sales</div>
+    <div class="chip">Weekend</div>
+    <div class="chip">Summer</div>
+    <div class="chip">Member Offers</div>
+    <div class="chip">Free Breakfast</div>
+  </section>
+
+  <main class="container deals-grid">
+    <!-- Deal card (repeat) -->
+    <article class="deal-card">
+      <div class="media"><img src="https://images.unsplash.com/photo-1501117716987-c8eeb1b195b8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0b9f3b0f6d7dbb8e5b2b0d9e4f8b0b61" alt="hotel room"></div>
+      <div class="deal-body">
+        <div class="badge">30% OFF</div>
+        <h3 class="deal-title">Comfort Stay, Near City Center</h3>
+        <p class="deal-loc">New Delhi, India</p>
+        <div class="deal-meta">
+          <div class="price">₹1,499 <span class="old">₹2,149</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <div class="media"><img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c2a9f3b6d6ecf8d1a1b3b2c9a9d1e0f" alt="hotel"></div>
+      <div class="deal-body">
+        <div class="badge">Save ₹800</div>
+        <h3 class="deal-title">Budget Inn With Free Wifi</h3>
+        <p class="deal-loc">Mumbai, India</p>
+        <div class="deal-meta">
+          <div class="price">₹999 <span class="old">₹1,799</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <div class="media"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3d74bd6b8c9f2f6a0b3c6f1d9b8a7c6d" alt="hotel pool"></div>
+      <div class="deal-body">
+        <div class="badge">Early Bird 25%</div>
+        <h3 class="deal-title">Resort with Pool & Breakfast</h3>
+        <p class="deal-loc">Goa, India</p>
+        <div class="deal-meta">
+          <div class="price">₹3,499 <span class="old">₹4,699</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <div class="media"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4e6b3b4d8b9a1d3e2c4f5a6b7c8d9e0f" alt="room"></div>
+      <div class="deal-body">
+        <div class="badge">Flat 40% OFF</div>
+        <h3 class="deal-title">Executive Room — Prime Location</h3>
+        <p class="deal-loc">Bengaluru, India</p>
+        <div class="deal-meta">
+          <div class="price">₹2,199 <span class="old">₹3,699</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <div class="media"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b1d5f3a1b2c4d5e6f7a8b9c0d1e2f3a" alt="suite"></div>
+      <div class="deal-body">
+        <div class="badge">Member Only</div>
+        <h3 class="deal-title">Luxury Suite — Limited Offer</h3>
+        <p class="deal-loc">Pune, India</p>
+        <div class="deal-meta">
+          <div class="price">₹4,599 <span class="old">₹6,999</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <div class="media"><img src="https://images.unsplash.com/photo-1505691723518-36fa0b5a4f7b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=f1a2b3c4d5e6f7081920a1b2c3d4e5f6" alt="hotel exterior"></div>
+      <div class="deal-body">
+        <div class="badge">Limited Seats</div>
+        <h3 class="deal-title">Comfort Plus — Near Train Station</h3>
+        <p class="deal-loc">Jaipur, India</p>
+        <div class="deal-meta">
+          <div class="price">₹1,199 <span class="old">₹1,899</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© OYO — Example UI (HTML/CSS only)</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

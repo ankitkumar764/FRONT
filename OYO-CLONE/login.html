@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYO - Login/Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* ==================== HEADER ==================== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #DC2626;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .header-links a:hover {
+            color: #DC2626;
+        }
+
+        /* ==================== MAIN CONTAINER ==================== */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* ==================== LEFT SECTION ==================== */
+        .left-section {
+            flex: 1;
+            background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+            color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .left-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .left-section p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            opacity: 0.95;
+            max-width: 500px;
+        }
+
+        .oyo-money-badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .oyo-money-badge p {
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+
+        .oyo-money-badge strong {
+            font-size: 1.3rem;
+            color: #FED7AA;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        .illustration {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ==================== RIGHT SECTION ==================== */
+        .right-section {
+            flex: 1;
+            background-color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .login-card p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        /* ==================== FORM ==================== */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .phone-input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .country-code {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            min-width: 80px;
+        }
+
+        .country-code:focus {
+            outline: none;
+            border-color: #DC2626;
+            background-color: white;
+        }
+
+        .phone-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .phone-input:focus {
+            outline: none;
+            border-color: #DC2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .verify-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #DC2626;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .verify-btn:hover {
+            background-color: #991B1B;
+        }
+
+        .verify-btn:active {
+            transform: scale(0.98);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            gap: 10px;
+            color: #999;
+        }
+
+        .divider:before,
+        .divider:after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        .password-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .password-link a {
+            color: #DC2626;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .password-link a:hover {
+            text-decoration: underline;
+        }
+
+        .other-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .option-link {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .option-link:hover {
+            border-color: #DC2626;
+            color: #DC2626;
+            background-color: #FEE2E2;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .left-section {
+                padding: 40px 30px;
+            }
+
+            .left-section h2 {
+                font-size: 2rem;
+            }
+
+            .right-section {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 20px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .header-links {
+                gap: 12px;
+                font-size: 0.85rem;
+            }
+
+            .container {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .left-section {
+                padding: 40px 20px;
+                min-height: 300px;
+            }
+
+            .left-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .left-section p {
+                font-size: 0.9rem;
+            }
+
+            .features-list {
+                display: none;
+            }
+
+            .illustration {
+                display: none;
+            }
+
+            .right-section {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .login-card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .header-links {
+                gap: 8px;
+                font-size: 0.8rem;
+            }
+
+            .left-section {
+                padding: 30px 15px;
+            }
+
+            .left-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .right-section {
+                padding: 30px 15px;
+            }
+
+            .login-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .phone-input-group {
+                flex-direction: column;
+            }
+
+            .country-code {
+                width: 100%;
+            }
+
+            .verify-btn {
+                padding: 10px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">OYO</div>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="#">Support</a>
+            <a href="#">FAQ</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- LEFT SECTION -->
+        <section class="left-section">
+            <h2>Hotels and homes across 800 cities, 24+ countries</h2>
+            <p>There's a smarter way to OYO around. Sign up with your phone number and get exclusive access to discounts and savings on OYO stays and with our many travel partners.</p>
+
+            <div class="oyo-money-badge">
+                <p>Sign up & Get</p>
+                <strong>₹500 OYO Money</strong>
+            </div>
+
+            <ul class="features-list">
+                <li>Book hotels in seconds</li>
+                <li>Exclusive member discounts</li>
+                <li>24/7 customer support</li>
+                <li>Flexible cancellation policy</li>
+            </ul>
+
+            <div class="illustration">🏨</div>
+        </section>
+
+        <!-- RIGHT SECTION -->
+        <section class="right-section">
+            <div class="login-card">
+                <h3>Login / Signup</h3>
+                <p>Please enter your phone number to continue</p>
+
+                <form>
+                    <div class="form-group">
+                        <div class="phone-input-group">
+                            <select class="country-code">
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+91">🇮🇳 +91</option>
+                            </select>
+                            <input 
+                                type="tel" 
+                                class="phone-input" 
+                                placeholder="Enter your phone number" 
+                                required
+                                pattern="[0-9]{10}"
+                            >
+                        </div>
+                    </div>
+
+                    <button type="submit" class="verify-btn">Verify Number</button>
+                </form>
+
+                <div class="password-link">
+                    <a href="#">Prefer to Sign in with password instead? Click here</a>
+                </div>
+
+                <div class="divider">or sign in as</div>
+
+                <div class="other-options">
+                    <a href="#" class="option-link">Travel Agent</a>
+                    <a href="#" class="option-link">Corporate</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
